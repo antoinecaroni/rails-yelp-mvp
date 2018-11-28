@@ -1,0 +1,24 @@
+<div class="container jumbotron">
+
+<h1>My list of restaurants</h1>
+
+<hr>
+
+  <ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+  <li class="list-group-item">
+    <%= link_to(restaurant.name, restaurant_path(restaurant)) %>
+    <%= restaurant.address %>
+    <%= restaurant.category %>
+  </li>
+  <% end %>
+  </ul>
+  <hr>
+
+
+<%= link_to('New Restaurant', new_restaurant_path, class:'btn btn-success btn-lg')%>
+
+
+</div>
+
+</div>

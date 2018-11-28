@@ -1,0 +1,31 @@
+<div class="container jumbotron">
+<h1>Task: <%= @restaurant.name %></h1>
+<hr>
+<h3>Address: <%= @restaurant.address %></h3>
+
+<hr>
+
+<p>Phone number: <%= @restaurant.phone_number %></p>
+<p>Category: <%= @restaurant.category %></p>
+
+<hr>
+
+<ul>
+Reviews: <% @restaurant.reviews.each do |review| %>
+<li> <p> <%= review.content %> --- Rating : <%= review.rating %> / 5</p> </li>
+<% end %>
+</ul>
+
+
+
+
+
+<hr>
+<%= link_to("Add a new review", new_restaurant_review_path(@restaurant), class:"btn btn-primary") %>
+
+<%= link_to("Back to restaurants", restaurants_path, class:"btn btn-primary") %>
+
+
+<%= link_to("Edit the restaurant", edit_restaurant_path(@restaurant), class:"btn btn-success") %>
+
+</div>

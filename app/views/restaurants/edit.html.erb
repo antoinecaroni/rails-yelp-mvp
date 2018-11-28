@@ -1,0 +1,14 @@
+<div class="container jumbotron">
+
+<h1> Edit the Restaurant: <%=@restaurant.name%></h1>
+
+<%= render 'form', restaurant: @restaurant %>
+
+
+<hr>
+
+<%= link_to("Back to restaurants", restaurants_path, class:"btn btn-primary") %>
+
+
+
+</div>
